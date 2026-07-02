@@ -14,7 +14,7 @@ def test_scrub_pii():
     assert scrub_pii(text2) == "Aadhaar: [REDACTED_AADHAAR]"
     
     text3 = "Account 1234567890123"
-    assert scrub_pii(text3) == "Account [REDACTED_ACCOUNT]"
+    assert scrub_pii(text3) == "Account [REDACTED_ACCOUNT_NUMBER]"
     
     text_clean = "What is the exit load?"
     assert scrub_pii(text_clean) == "What is the exit load?"
